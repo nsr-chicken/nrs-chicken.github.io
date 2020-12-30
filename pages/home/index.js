@@ -67,7 +67,7 @@ export default class Home extends React.Component {
     return (
       <div >
         <Head>
-          <title>NRS CHICKEN</title>
+          <title>NSR CHICKEN</title>
           <link rel="icon" href="/favicon.ico" />
           <script src="https://smtpjs.com/v3/smtp.js"></script>
         </Head>
