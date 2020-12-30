@@ -1,0 +1,1 @@
+export {Banner,Product,About,ContactUs} from './home'

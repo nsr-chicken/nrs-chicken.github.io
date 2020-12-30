@@ -1,0 +1,210 @@
+@import './abstracts/abstracts-dir.scss';
+//
+// :button:input:check-box:search-box:table:cursor:container:sidebar:modal:cards:tabs:typography:text //
+
+
+
+.material-icons {
+  vertical-align: middle;
+}
+
+.masthead {
+  background-image: url('/img/product/chickenBG.jpg');
+  background-color: transparent !important;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  background: #ffffff;
+}
+
+.navbar.navbar-shrink {
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+  color: #2c3e50;
+}
+
+.navbar-brand {
+  color: #2c3e50 !important;
+}
+
+.banner-container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.product-carousel .card .card-img-top {
+  max-height: 175px;
+}
+
+.product-carousel .owl-stage {
+  margin-bottom: 15px;
+}
+
+.product-carousel .owl-nav button span {
+  font-size: 37px;
+}
+
+.product-carousel .owl-nav button {
+  width: 50px;
+  height: 50px;
+  color: #ffffff !important;
+  background-color: #1abc9c !important;
+  border-color: #1abc9c !important;
+  border-radius: 50% !important;
+}
+
+
+.product-page {
+  .swiper-slide {
+    &:first-child{
+      margin-left: 40px;
+    }
+  }
+  .card {
+    &.card-deActive {
+      background-color: #EEF0F8;
+    }
+
+    .card-img-top {
+      max-height: 250px;
+      min-height: 250px;
+    }
+
+    .card-text {
+      height: 245px;
+    }
+  }
+}
+
+
+
+//ph loder
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0
+  }
+
+  100% {
+    background-position: 468px 0
+  }
+}
+
+.ph-loader {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 1000px 104px;
+  position: relative;
+  overflow: hidden;
+
+
+  &.ph-5h {
+    height: 5px;
+  }
+
+  &.ph-15h {
+    height: 15px;
+  }
+
+  &.ph-19h {
+    height: 19px;
+  }
+
+  &.img-100 {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+
+  div {
+    position: absolute;
+    border: 4px solid #cecece;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+    &:nth-child(2) {
+      animation-delay: -0.5s;
+    }
+  }
+
+
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+
+.header-progress{
+  z-index: 9999;
+  position: absolute;
+
+&.progress-line, &.progress-line:before {
+  height: 5px;
+  width: 100%;
+  margin: 0;
+
+}
+&.progress-line {
+  background-color: #99e2d4;
+  display: -webkit-flex;
+  display: flex;
+}
+&.progress-line:before {
+  background-color: #1abc9c ;
+  content: '';
+  -webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+}
+@-webkit-keyframes running-progress {
+  0% { margin-left: 0px; margin-right: 100%; }
+  50% { margin-left: 25%; margin-right: 0%; }
+  100% { margin-left: 100%; margin-right: 0; }
+}
+@keyframes running-progress {
+  0% { margin-left: 0px; margin-right: 100%; }
+  50% { margin-left: 25%; margin-right: 0%; }
+  100% { margin-left: 100%; margin-right: 0; }
+}
